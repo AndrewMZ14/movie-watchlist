@@ -16,6 +16,7 @@ header {
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/background-img.png');
     background-size: cover;
+    background-repeat: no-repeat;
     width: 550px;
     height: 208px;
     margin-left: auto;
