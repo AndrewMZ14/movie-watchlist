@@ -67,7 +67,11 @@ async function getHtmlString(searchResultArray){
         return htmlString
     }
     catch(error){
+        let htmlString = `<div class="not-found-div">
+        <p class="not-found-text">Could not find what you were looking for try something else.</p>
+        </div>`
         console.error(error)
+        return htmlString
     }
 
     

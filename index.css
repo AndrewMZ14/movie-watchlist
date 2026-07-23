@@ -212,3 +212,18 @@ h2{
     line-height: 20px;
     margin-top: 10px;
 }
+
+/* Error styles */
+.not-found-text{
+    display: block;
+    font-weight: 700;
+    size: 3rem;
+    color: #DFDDDD;
+    margin: auto;
+}
+
+.not-found-div{
+    display: flex;
+    width: 550px;
+    height: 208px;
+}
