@@ -17,6 +17,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/background-img.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 0% 20%;
     width: 550px;
     height: 208px;
     margin-left: auto;
@@ -86,6 +87,13 @@ input:focus{
 }
 
 main{
+    margin-top: 50px;
+    width: 550px;
+    height: 208px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.default-div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,6 +103,7 @@ main{
     margin-right: auto;
     align-items: center;
     height: 571px;
+   
 }
 
 .default-text{
@@ -103,4 +112,102 @@ main{
     width: 148px;
     height: 20px;
     color: #DFDDDD;
+}
+
+.watchlist-default{
+    font-weight: 700;
+    size: 1.125rem;
+    width: 200px;
+    height: 20px;
+    color: #DFDDDD;
+    margin-left: 10px;
+}
+
+/* Movie Card Style */
+.movie-card{
+    display: flex;
+    color: black;
+    width: 462px;
+    height: 170px;
+    margin-left: 0;
+    border-bottom: 1.5px solid #E5E7EB;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    margin-bottom: 20px;;
+}
+
+.movie-details{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.poster{
+    width: 99px;
+    height: 147.41px;
+    border: none;
+    margin-right: 20px;
+}
+
+/* Title and rating styles */
+.title-rating{
+   display :flex;
+   align-items: center;
+   height: 20px;
+   margin-top: 20px;
+  
+}
+
+.rating{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.fa-star{
+    margin-left: 10px;
+}
+
+
+/* Duration Genre, Add Watchlist styles */
+.duration-genre{
+    display: flex;
+    margin-top: 0;
+    height: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.duration, .genre, .btn-label{
+    font-weight: 400;
+    font-size: 12px;
+    line-height :20px;
+}
+
+.watchlist-btn{
+    border:none;
+    margin-left: 39px;
+    background-color: white; 
+}
+
+.genre{
+    margin-left: 10px;
+}
+
+.watchlist-div{
+    display: flex;
+}
+
+/* Plot */
+.plot{
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
 }
