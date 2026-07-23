@@ -32,6 +32,11 @@ h1{
 .watchlist-link{
     color: white;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.watchlist-link:hover{
+    color: red;
 }
 
 /* Search Bar Styles */
@@ -71,6 +76,7 @@ input:focus{
     background-color: #F9FAFB;
     border: 1px solid #D1D5DB;
     font-family: 'Inter', sans-serif;
+    cursor: pointer;
 }
 
 .material-symbols-outlined{
@@ -195,6 +201,7 @@ h2{
     border:none;
     margin-left: 39px;
     background-color: white; 
+    cursor: pointer;
 }
 
 .genre{

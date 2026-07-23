@@ -1,10 +1,33 @@
 //Element variables
+
 const mainContent = document.getElementById('main-content')
 const searchField = document.getElementById('search-field')
 const searchBtn = document.getElementById('search-btn')
-
+const watchList = []
+let idSearchedMovies = []
 //Event listeners
 searchBtn.addEventListener('click', searchBtnLogic)
+mainContent.addEventListener('click', function(e){
+
+    //Checking which favourite button was clicked
+    try{
+        const targetBtn = e.target.closest("[data-id]")
+        if(idSearchedMovies){
+        let favourite = idSearchedMovies.filter(function(movie) {
+            return movie.imdbID === targetBtn.dataset.id
+        })
+
+        if(!watchList.includes(favourite[0])){
+            watchList.push(favourite[0])
+        }
+    }
+    localStorage.setItem("watchList", JSON.stringify(watchList))
+    }
+    catch(error){
+
+    }
+    
+})
 
 
 //Functions
@@ -21,7 +44,6 @@ async function searchBtnLogic(){
 
         let htmlString = await getHtmlString(searchResultArray)
         
-        console.log(htmlString)
         mainContent.innerHTML = htmlString
     }
     catch(error){
@@ -40,8 +62,9 @@ async function getHtmlString(searchResultArray){
         return await promise.json()
     })
     
-    const idSearchedMovies = await Promise.all(promisesArray)
+    idSearchedMovies = await Promise.all(promisesArray)
     let htmlString = idSearchedMovies.map((movie) => {
+                       
             return `
                <div class="movie-card">
             <img src="${movie.Poster}" alt="a poster of the movie ${movie.Title}" class="poster">
@@ -54,7 +77,7 @@ async function getHtmlString(searchResultArray){
                     <p class="duration">${movie.Runtime}<p>
                     <p class="genre">${movie.Genre}</p>
                     <div class="watchlist-div">
-                        <button class="watchlist-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                        <button class="watchlist-btn"><i class="fa-solid fa-circle-plus" data-id="${movie.imdbID}"></i></button>
                         <p class="btn-label">Watchlist</p></div>
                 </div>
 
@@ -75,4 +98,11 @@ async function getHtmlString(searchResultArray){
     }
 
     
+}
+
+//Function for watch lsit button logic
+function wacthListLogic(idSearchedMovies){
+    idSearchedMovies.forEach(function() {
+       
+    })
 }
