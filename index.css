@@ -39,7 +39,7 @@ input{
     background-color: transparent;
     border: 0px solid;
     height: 20px;
-    width: 160px;
+    width: 300px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -172,6 +172,7 @@ h2{
 
 .fa-star{
     margin-left: 10px;
+    color: gold;
 }
 
 
