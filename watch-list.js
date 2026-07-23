@@ -1,6 +1,7 @@
 const mainContent = document.getElementById("main-content")
 const watchList = JSON.parse(localStorage.getItem("watchList"))
 
+//Display watch list if it exists
 if(watchList){
     let htmlString = watchList.map((movie) => {
         return `
@@ -12,7 +13,7 @@ if(watchList){
                 </div>
 
                 <div class="duration-genre">
-                    <p class="duration">${movie.Runtime}<p>
+                    <p class="duration">${movie.Runtime}</p>
                     <p class="genre">${movie.Genre}</p>
                     <div class="watchlist-div">
                         <button class="watchlist-btn"><i class="fa-solid fa-circle-plus" data-id="${movie.imdbID}"></i></button>

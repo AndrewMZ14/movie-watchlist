@@ -36,7 +36,7 @@ async function searchBtnLogic(){
     let searchInput = searchField.value
     
     try{
-        let promise = await fetch(`http://www.omdbapi.com/?apikey=8cb2b4e1&s=${searchInput}`)
+        let promise = await fetch(`http://www.omdbapi.com/?apikey={your key}=${searchInput}`)
         let data = await promise.json()
 
         let searchResultArray = data.Search
@@ -58,7 +58,7 @@ async function getHtmlString(searchResultArray){
 
         //Creating an array of promises and using Promise.all() to wait for them
         const promisesArray = searchResultArray.map(async (movie) =>{
-        const promise = await fetch(`http://www.omdbapi.com/?apikey=8cb2b4e1&i=${movie.imdbID}`)
+        const promise = await fetch(`http://www.omdbapi.com/?apikey={your key}=${movie.imdbID}`)
         return await promise.json()
     })
     
@@ -74,10 +74,10 @@ async function getHtmlString(searchResultArray){
                 </div>
 
                 <div class="duration-genre">
-                    <p class="duration">${movie.Runtime}<p>
+                    <p class="duration">${movie.Runtime}</p>
                     <p class="genre">${movie.Genre}</p>
                     <div class="watchlist-div">
-                        <button class="watchlist-btn"><i class="fa-solid fa-circle-plus" data-id="${movie.imdbID}"></i></button>
+                        <button class="watchlist-btn" data-id="${movie.imdbID}"><i class="fa-solid fa-circle-plus" ></i></button>
                         <p class="btn-label">Watchlist</p></div>
                 </div>
 
