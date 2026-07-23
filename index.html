@@ -8,15 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
 </head>
 <body>
     <header>
         <h1>Find your film</h1>
-        <a>My Watchlist</a>
+        <a href="#" class="watchlist-link">My Watchlist</a>
+
+         <div class="search-bar" id="search-bar">
+            <span class="material-symbols-outlined">search</span>
+            <input placeholder="Search for a movie">
+            <button class="search-btn" id="search-btn">Search</button>
+        </div>
     </header>
 
     <main>
-        <div class="search-bar" id="search-bar"></div>
+        <div class="movie-icon"></div>
+        <p class="default-text">Start exploring</p>
     </main>
     
 </body>

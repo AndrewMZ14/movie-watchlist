@@ -8,6 +8,8 @@ body{
     color: white;
 }
 
+
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-around;
@@ -18,8 +20,86 @@ header {
     height: 208px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 h1{
     margin-top: 0;
+}
+
+.watchlist-link{
+    color: white;
+    text-decoration: none;
+}
+
+/* Search Bar Styles */
+input{
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+.search-bar{
+    display: flex;
+    width: 462px;
+    height: 38px;
+    background-color: #FFFFFF;
+    position :absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #6B7280;
+    border: 1px solid #D1D5DB;
+}
+
+.search-btn{
+    margin-left: auto;
+    height: 38px;
+    width: 120px;
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    font-family: 'Inter', sans-serif;
+}
+
+.material-symbols-outlined{
+    color: #6B7280;
+}
+
+/* Main content area */
+.movie-icon{
+    background-image: url('images/Icon.png');
+    width: 70px;
+    height: 61.25px;
+    font-size: 70px;
+    margin-right: 35px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 550px;
+    height: 208px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: 571px;
+}
+
+.default-text{
+    font-weight: 700;
+    size: 1.125rem;
+    width: 148px;
+    height: 20px;
+    color: #DFDDDD;
 }
